@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 const heading = Cormorant_Garamond({ 
@@ -8,15 +8,14 @@ const heading = Cormorant_Garamond({
   variable: "--font-heading" 
 });
 
-const body = DM_Sans({ 
-  subsets: ["latin"], 
-  weight: ["300", "400", "500", "700"],
+const body = Inter({ 
+  subsets: ["latin"],
   variable: "--font-body" 
 });
 
 export const metadata: Metadata = {
-  title: "Diva's Cakes Affairs | Bespoke Luxury Cakes Lagos",
-  description: "Lagos' premier destination for handcrafted cakes, wedding tiers, and luxury pastries.",
+  title: "Diva's Cakes Affairs | Baking Dreams into Edible Reality",
+  description: "Artisan cakes and confectionery crafted with passion in the heart of Lagos.",
 };
 
 export default function RootLayout({
@@ -26,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} font-sans bg-secondary`}>
+      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
