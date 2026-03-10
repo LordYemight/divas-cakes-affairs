@@ -1,27 +1,31 @@
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import "./globals.css";
 
 const heading = Cormorant_Garamond({ 
-  subsets: ['latin'], 
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-heading' 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-heading" 
 });
-
 const body = DM_Sans({ 
-  subsets: ['latin'], 
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-body' 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-body" 
 });
 
-export const metadata = {
-  title: "Diva's Cakes Affairs | Luxury Cakes in Lagos",
-  description: "Artisan cake studio specializing in bespoke wedding and celebration cakes.",
+export const metadata: Metadata = {
+  title: "Diva's Cakes Affairs | Crafting Edible Masterpieces",
+  description: "Lagos' premier custom cake studio specializing in bespoke wedding, birthday, and novelty cakes.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} font-sans`}>
+      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
