@@ -7,6 +7,7 @@ const heading = Cormorant_Garamond({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-heading" 
 });
+
 const body = DM_Sans({ 
   subsets: ["latin"], 
   weight: ["300", "400", "500", "700"],
@@ -14,8 +15,8 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Diva's Cakes Affairs | Crafting Edible Masterpieces",
-  description: "Lagos' premier custom cake studio specializing in bespoke wedding, birthday, and novelty cakes.",
+  title: "Diva's Cakes Affairs | Bespoke Luxury Cakes Lagos",
+  description: "Lagos' premier destination for handcrafted cakes, wedding tiers, and luxury pastries.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
+      <body className={`${heading.variable} ${body.variable} font-sans bg-secondary`}>
         {children}
       </body>
     </html>
